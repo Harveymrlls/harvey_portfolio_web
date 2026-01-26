@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="modal_image.css"/>
+
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <a href="index.html#portfolio">
+        <button
+        class="bg-purple-600 text-center w-80 rounded-2xl h-14 relative text-white text-xl font-semibold group mt-4"
+        type="button"
+        >
+        <div
+            class="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1024 1024"
+            height="25px"
+            width="25px"
+            >
+            <path
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                fill="#000000"
+            ></path>
+            <path
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                fill="#000000"
+            ></path>
+            </svg>
+        </div>
+        <p class="translate-x-2">Go Back to My Portfolio</p>
+        </button>
+    </a>
+    <h2 class="text-4xl font-bold text-center mb-6">My Project Gallery<span class="text-purple-600"> <br> POS System</span></h2>
+    
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 lg:px-16 mb-12">
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Log in Page</h2></div>
+            <img src="image/pos/login_page.png" alt="Log in Page - only unique credential can be login" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Home Page (Manage Inventory, Point of Sale, View Sales)</h2></div>
+            <img src="image/pos/home_page.png" alt="Home Page (Manage Inventory, Point of Sale, View Sales)" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)"/>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Inventory management page </h2></div>
+            <img src="image/pos/inventory_page.png" alt="Inventory management page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)"/>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">POS Page</h2></div>
+            <img src="image/pos/POS_page.png" alt="POS Page - manage the customer items and handle the total payment and change, and also can generate the receipt" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)"/>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Printing Custumer Receipt</h2></div>
+            <img src="image/pos/print_receipt.png" alt="Printing Custumer Receipt" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)"/>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Viewing Sales Page </h2></div>
+            <img src="image/pos/viewsale_page.png" alt="Viewing Sales Page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)"/>
+        </div>
+
+
+    </div>
+    
+
+    <script src="modal_image.js"></script>
+</body>
+</html>

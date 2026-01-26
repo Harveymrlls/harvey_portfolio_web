@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="modal_image.css"/>
+
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <a href="index.html#portfolio">
+        <button
+        class="bg-purple-600 text-center w-80 rounded-2xl h-14 relative text-white text-xl font-semibold group mt-4"
+        type="button"
+        >
+        <div
+            class="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1024 1024"
+            height="25px"
+            width="25px"
+            >
+            <path
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                fill="#000000"
+            ></path>
+            <path
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                fill="#000000"
+            ></path>
+            </svg>
+        </div>
+        <p class="translate-x-2">Go Back to My Portfolio</p>
+        </button>
+    </a>
+    
+    <h2 class="text-4xl font-bold text-center mb-6">My Project Gallery<span class="text-purple-600"> <br> HarvsGallery Website</span></h2>
+    <h2 class="text-1xl font-bold text-center mb-6">I Deploy it using infinityfree <a href="https://harvrsgallery.infinityfreeapp.com/" target="_blank"
+          class="text-blue-600 hover:underline mb-4 text-center">
+          <br> Check this site by clicking here!
+        </a></h2>
+
+        <h2 class="text-1xl font-bold mb-6 ml-20 mr-20">
+            HarvsGallery is a web-based media management platform that enables users to upload, organize, and 
+            manage their photos and videos, and access them anytime, anywhere, through my user-friendly web platform.
+        </h2>
+    
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 lg:px-16 mb-12">
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Login Page</h2></div>
+            <img src="image/HarvsGallery/login_page.png" alt="Login Page - Users can create their account for their privacy" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Main page - users can upload thier photos and videos with max 10MB only</h2></div>
+            <img src="image/HarvsGallery/Gallery page.png" alt="Main page - users can upload thier photos and videos with max 10MB only" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Uploading Process</h2></div>
+            <img src="image/HarvsGallery/uploading.png" alt="Uploading Process" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">A website with uploaded phtos and videos - can be download and delete form database and directory</h2></div>
+            <img src="image/HarvsGallery/page with upload.png" alt="A website with uploaded phtos and videos - can be download and delete form database and directory" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Watching Videos - can lower the volume, change the playback speed, view in full screen, and also view in picture in picture</h2></div>
+            <img src="image/HarvsGallery/video preview.png" alt="Watching Videos - can lower the volume, change the playback speed, view in full screen, and also view in picture in picture" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Viewing image</h2></div>
+            <img src="image/HarvsGallery/image preview.png" alt="Viewing image" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Database management</h2></div>
+            <img src="image/HarvsGallery/database.png" alt="Database management" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Database management</h2></div>
+            <img src="image/HarvsGallery/database1.png" alt="Database management" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        
+
+        
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-6">HarvsGallery <span class="text-purple-600">Complete Workflow Summary</span></h2>
+
+        <div class="container">
+        <div class="phase">
+            <h2><strong>1. Authentication & Entry</strong> </h2>
+            <ul>
+                <li>User accesses website → <span class="highlight">index.html</span> loads</li>
+                <li>User chooses between:
+                    <ul class="sub-list">
+                        <li><strong>Login</strong>: Existing credentials verification</li>
+                        <li><strong>Signup</strong>: New account creation with username availability check</li>
+                    </ul>
+                </li>
+                <li>Successful authentication creates PHP session with user data</li>
+                <li>User redirected to main gallery interface</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>2. Gallery Initialization</strong></h2>
+            <ul>
+                <li><span class="highlight">gallery.php</span> loads and validates user session</li>
+                <li>JavaScript fetches user's media data via <span class="highlight">gallery_fetch.php</span></li>
+                <li>Database query retrieves user's uploads from <span class="highlight">uploads</span> table</li>
+                <li>Dynamic rendering creates gallery grid with images and videos</li>
+                <li>Gallery ready for user interactions</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>3. File Upload Process</strong></h2>
+            <ul>
+                <li>User selects file through upload interface</li>
+                <li><strong>Client-side validation</strong>: File type and size checking</li>
+                <li>Progress bar displays during upload</li>
+                <li><strong>Server-side processing</strong> (<span class="highlight">upload.php</span>):
+                    <ul class="sub-list">
+                        <li>Session validation</li>
+                        <li>File type verification</li>
+                        <li>Move file to <span class="highlight">uploads/</span> directory</li>
+                        <li>Store metadata in database</li>
+                    </ul>
+                </li>
+                <li>Success/error notification displayed</li>
+                <li>Gallery automatically refreshes</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>4. Media Viewing</strong></h2>
+            <ul>
+                <li>User clicks on media item</li>
+                <li>System detects file type (image/video)</li>
+                <li>Opens appropriate modal viewer:
+                    <ul class="sub-list">
+                        <li><strong>Images</strong>: Full-size display</li>
+                        <li><strong>Videos</strong>: Embedded player with controls</li>
+                    </ul>
+                </li>
+                <li>User closes modal to return to gallery</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>5. File Download</strong></h2>
+            <ul>
+                <li>User clicks download button on media item</li>
+                <li>System verifies file ownership</li>
+                <li>Browser initiates file download</li>
+                <li>Original filename preserved</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>6. File Deletion</strong></h2>
+            <ul>
+                <li>User clicks delete button</li>
+                <li><strong>Confirmation dialog</strong> appears</li>
+                <li><strong>Server processing</strong> (<span class="highlight">delete.php</span>):
+                    <ul class="sub-list">
+                        <li>Ownership verification</li>
+                        <li>Physical file deletion from server</li>
+                        <li>Database record removal</li>
+                    </ul>
+                </li>
+                <li>Success notification shown</li>
+                <li>Gallery refreshes to reflect changes</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>7. Session Management</strong></h2>
+            <ul>
+                <li><strong>Every page request</strong> validates session</li>
+                <li>Automatic redirect to login if session invalid</li>
+                <li>Session timeout after period of inactivity</li>
+                <li>Manual logout destroys session and redirects to login</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>8. Data Flow</strong></h2>
+            <ul>
+                <li><strong>User Data</strong>: Registration → Database (<span class="highlight">users</span> table) → Session storage</li>
+                <li><strong>File Upload</strong>: Client → Server validation → File system → Database → UI update</li>
+                <li><strong>Media Retrieval</strong>: Database query → JSON response → JavaScript rendering</li>
+                <li><strong>Security</strong>: Session checks → Ownership verification → File validation</li>
+            </ul>
+        </div>
+
+        <div class="phase">
+            <h2><strong>9. Security Layers</strong></h2>
+            <ul>
+                <li>Password hashing for user accounts</li>
+                <li>Session-based authentication</li>
+                <li>File ownership verification before operations</li>
+                <li>Client and server-side file validation</li>
+                <li>SQL injection prevention via prepared statements</li>
+                <li>Cross-user data isolation</li>
+            </ul>
+        </div>
+
+    </div>
+    
+
+    <script src="modal_image.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="modal_image.css"/>
+
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <a href="index.html#portfolio">
+        <button
+        class="bg-purple-600 text-center w-80 rounded-2xl h-14 relative text-white text-xl font-semibold group mt-4"
+        type="button"
+        >
+        <div
+            class="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1024 1024"
+            height="25px"
+            width="25px"
+            >
+            <path
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                fill="#000000"
+            ></path>
+            <path
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                fill="#000000"
+            ></path>
+            </svg>
+        </div>
+        <p class="translate-x-2">Go Back to My Portfolio</p>
+        </button>
+    </a>
+    
+    <h2 class="text-4xl font-bold text-center mb-6">My Project Gallery <span class="text-purple-600"><br> HarvsNotely Website</span></h2>
+    <h2 class="text-1xl font-bold text-center mb-6">I Deploy it using infinityfree <a href="http://harvey-mrlls-notely.infinityfreeapp.com/" target="_blank"
+          class="text-blue-600 hover:underline mb-4 text-center">
+          <br> Check this site by clicking here!
+        </a></h2>
+
+        <h2 class="text-1xl font-bold mb-6 ml-20 mr-20">
+            HarvsNotely empowers you to note everything securely, your ideas, memories, 
+            and important information. You can easily categorize, pin important notes, and archive older entries. 
+        </h2>
+
+        
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 lg:px-16 mb-12">
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Welcome Page</h2></div>
+            <img src="image/HarvsNotely/welcome_page.png" alt="Welcome Page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Login Page</h2></div>
+            <img src="image/HarvsNotely/login.png" alt="Login Page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Signup Page</h2></div>
+            <img src="image/HarvsNotely/signup.png" alt="Signup Page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Dashboard Page</h2></div>
+            <img src="image/HarvsNotely/dashboard.png" alt="Dashboard Page" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Modal Notes full Preview</h2></div>
+            <img src="image/HarvsNotely/modal preview.png" alt="Modal Notes full Preview" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Create New Note</h2></div>
+            <img src="image/HarvsNotely/create note.png" alt="Create New Note" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Edit Existing Note</h2></div>
+            <img src="image/HarvsNotely/edit note.png" alt="Edit Existing Note" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Archived Note Page</h2></div>
+            <img src="image/HarvsNotely/archived note.png" alt="Archived Note" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+            <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Database Management</h2></div>
+            <img src="image/HarvsNotely/database.png" alt="Database Management" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
+        </div>
+
+        
+        
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-6">Harvsnotely <span class="text-purple-600">Complete Workflow Summary</span></h2>
+
+    <div class="container max-w-4xl mx-auto space-y-8">
+        <!-- Phase 1 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>1. Authentication & Entry</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li>User accesses website → <span class="highlight bg-yellow-100 px-1 rounded">welcome.blade.php</span> loads with hero section</li>
+                <li>User chooses between:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li><strong>Login</strong>: Existing credentials verification via <span class="highlight bg-yellow-100 px-1 rounded">AuthController@login</span></li>
+                        <li><strong>Signup</strong>: New account creation with username uniqueness check via <span class="highlight bg-yellow-100 px-1 rounded">AuthController@register</span></li>
+                    </ul>
+                </li>
+                <li>Successful authentication creates user session and redirects to dashboard</li>
+                <li>User redirected to main notes dashboard → <span class="highlight bg-yellow-100 px-1 rounded">notes.index.blade.php</span></li>
+            </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>2. Note Management Dashboard</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li>Dashboard displays two main sections:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li><strong>Pinned Notes</strong>: Notes marked as important with red border indicators</li>
+                        <li><strong>All Notes</strong>: Complete collection of user's notes</li>
+                    </ul>
+                </li>
+                <li>Each note card shows:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Title (limited to 30 characters)</li>
+                        <li>Content preview (150 characters)</li>
+                        <li>Creation date</li>
+                        <li>Color-coded background</li>
+                        <li>Action buttons (Pin, Edit, Archive, Delete)</li>
+                    </ul>
+                </li>
+                <li>"New Note" button triggers note creation workflow</li>
+            </ul>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>3. Note Creation & Editing</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Create Note</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>User clicks "New Note" → <span class="highlight bg-yellow-100 px-1 rounded">notes.create.blade.php</span> loads</li>
+                        <li>Form includes: Title (required), Content (required), Color selection, Pin option</li>
+                        <li>Submission triggers <span class="highlight bg-yellow-100 px-1 rounded">NoteController@store</span></li>
+                        <li>Data validation and storage in MySQL database</li>
+                        <li>Redirect back to dashboard with success message</li>
+                    </ul>
+                </li>
+                <li><strong>Edit Note</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>User clicks edit icon → <span class="highlight bg-yellow-100 px-1 rounded">notes.edit.blade.php</span> loads</li>
+                        <li>Authorization check ensures user owns the note</li>
+                        <li>Form pre-filled with existing note data</li>
+                        <li>Submission triggers <span class="highlight bg-yellow-100 px-1 rounded">NoteController@update</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>4. Interactive Note Operations</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Pin/Unpin Notes</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Click pin icon → <span class="highlight bg-yellow-100 px-1 rounded">NoteController@togglePin</span></li>
+                        <li>Toggles <code>is_pinned</code> field in database</li>
+                        <li>Pinned notes appear in special section with red accent</li>
+                    </ul>
+                </li>
+                <li><strong>Archive/Restore Notes</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Click archive icon → <span class="highlight bg-yellow-100 px-1 rounded">NoteController@toggleArchive</span></li>
+                        <li>Toggles <code>is_archived</code> field</li>
+                        <li>Archived notes moved to separate archive view</li>
+                    </ul>
+                </li>
+                <li><strong>Delete Notes</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Click delete icon → Confirmation dialog appears</li>
+                        <li>Confirmed deletion triggers <span class="highlight bg-yellow-100 px-1 rounded">NoteController@destroy</span></li>
+                        <li>Permanent removal from database</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>5. Advanced Features & User Experience</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Modal View System</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Click any note card → Full note modal opens</li>
+                        <li>Displays complete title and content</li>
+                        <li>Shows creation date and status badges</li>
+                        <li>Close via X button, escape key, or backdrop click</li>
+                    </ul>
+                </li>
+                <li><strong>Responsive Navigation</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Desktop: Horizontal menu with all options</li>
+                        <li>Mobile: Hamburger menu with slide-down animation</li>
+                        <li>Fixed positioning with high z-index</li>
+                    </ul>
+                </li>
+                <li><strong>Archive Management</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Separate archive view via <span class="highlight bg-yellow-100 px-1 rounded">notes.archived.blade.php</span></li>
+                        <li>Restore functionality to bring notes back to main view</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phase 6 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>6. Security & Data Flow</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Authentication Layer</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Session-based authentication</li>
+                        <li>Protected routes require auth middleware</li>
+                        <li>Automatic redirect to login for unauthorized access</li>
+                    </ul>
+                </li>
+                <li><strong>Authorization System</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>NotePolicy checks user ownership for all operations</li>
+                        <li>Prevents users from accessing others' notes</li>
+                        <li>Automatic 403 errors for unauthorized actions</li>
+                    </ul>
+                </li>
+                <li><strong>Data Protection</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>CSRF protection on all forms</li>
+                        <li>Password hashing with bcrypt</li>
+                        <li>SQL injection prevention via Eloquent ORM</li>
+                        <li>Input validation on all user submissions</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phase 7 -->
+        <div class="phase bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600"><strong>7. User Session & Navigation</strong></h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Session Management</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Automatic session creation upon login</li>
+                        <li>Session data stored in database sessions table</li>
+                        <li>Automatic logout after session expiration</li>
+                    </ul>
+                </li>
+                <li><strong>Navigation Flow</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Dashboard → Main notes overview</li>
+                        <li>Archived → Separate view for archived notes</li>
+                        <li>Create/Edit → Note modification interfaces</li>
+                        <li>Logout → Session destruction and redirect to home</li>
+                    </ul>
+                </li>
+                <li><strong>Flash Messages</strong>:
+                    <ul class="sub-list ml-6 mt-2 space-y-1">
+                        <li>Success/error messages after actions</li>
+                        <li>Auto-disappearing after 3 seconds</li>
+                        <li>Smooth slide-in/slide-out animations</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+
+    <script src="modal_image.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+:root {
+    --primary: #3b82f6;
+    --secondary: #1e40af;
+    --accent: #10b981;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.skill-meter {
+    height: 4px;
+    transition: width 1s ease-out;
+}
+
+/* MOBILE MENU STYLES */
+#menu {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    #menu {
+        position: absolute;
+        top: 100%;
+        left: 10;
+        right: 0;
+        background: white;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e5e7eb;
+        max-height: 0;
+        opacity: 0;
+        z-index: 40;
+    }
+
+    #menu.mobile-open {
+        max-height: 100vh;
+        opacity: 1;
+        padding: 1rem 0;
+    }
+
+    #menu a {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #f3f4f6;
+        width: 100%;
+        transition: all 0.2s ease;
+    }
+
+    #menu a:last-child {
+        border-bottom: none;
+    }
+
+    #menu a:hover {
+        background-color: #f9fafb;
+        color: #9333ea;
+    }
+
+    /* Hamburger icon animation */
+    #mobile-menu-button svg {
+        transition: transform 0.3s ease;
+    }
+
+    #mobile-menu-button.menu-open svg {
+        transform: rotate(90deg);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    #menu {
+        max-height: none !important;
+        opacity: 1 !important;
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-top: none !important;
+        padding: 0 !important;
+    }
+}
+
+.interest-logo{
+    width: 40px;
+    height: 40px;
+}
+h1 {
+    margin-top: 20px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+.gallery-item{
+    max-width: 90%; 
+    height: auto; 
+    display: block; 
+    margin-top: 20px;
+}
+.gallery img {
+    width: auto;
+    height: auto;
+    max-width: 700px;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.small-logo {
+    width: 15px;
+    height: 15px;
+}
+@media (min-width: 640px) {
+    .small-logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section offset for fixed header */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Active navigation state */
+.nav-link.active {
+    border-bottom-color: #9333ea !important;
+    color: #9333ea !important;
+}
+/* harvey photo */
+
+.cardharv {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.cardharv h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.cardharv::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient( 180deg,#7c3aed, #059669);
+  height: 130%;
+  animation: rotBGimg 1s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardharv {
+  position: relative;
+  width: 350px;   
+  height: 500px;
+}
+
+.cardharv::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 15px;
+
+  background-image: url("image/grad_photo.jpg");
+  background-size: contain;      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* download resume button */
+
+.downloadbutton {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #047857;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.downloadbutton:hover::before {
+  transform: scaleX(1);
+}
+
+.downloadbutton-content {
+  position: relative;
+  z-index: 1;
+}
+
+.downloadbutton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: #9333EA;
+  transition: all 0.475s;
+}
+
+.card_words {
+                                                                        /*words container */
+
+
+}
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_4991 10s infinite;
+}
+
+@keyframes spin_4991 {
+  0%, 10% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  20%, 30% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  40%, 50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  60%, 70% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  80%, 90% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+/* Clean Harvey Miralles Shine Effect */
+.word_shine {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #a78bfa 25%,
+    #7c3aed 50%,
+    #c4b5fd 75%,
+    #7c3aed 100%
+  );
+  background-size: 200% auto;
+  background-position: 0% center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
